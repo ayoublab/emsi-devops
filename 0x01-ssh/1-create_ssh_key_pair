@@ -1,1 +1,3 @@
-ssh-keygen -b 4096 -N “betty” -f “holberton”
+#!/usr/bin/env bash
+# Creates an RSA key pair
+ssh-keygen -f holberton -b 4096 -N betty 
