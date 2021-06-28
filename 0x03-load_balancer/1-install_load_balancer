@@ -8,9 +8,9 @@ sudo apt-get -y install haproxy=2.0.\*
 echo "frontend load-banlancer
     bind *:80
     mode http
-    default_backend web-backend" >> /etc/haproxy/haproxy.cfg
+    default_backend web-backend" | sudo tee /etc/haproxy/haproxy.cfg
 echo "backend web-backend
     balance roundrobin
-    server 3123-web-01 35.237.154.2:80 check
-    server 3123-web-02 34.73.23.220:80 check" >> /etc/haproxy/haproxy.cfg
+    server 3127-web-01 35.231.241.237:80 check
+    server 3127-web-02 34.237.200.98:80 check" | sudo tee /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
